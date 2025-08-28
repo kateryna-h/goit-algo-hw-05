@@ -3,7 +3,7 @@ from typing import Callable
 
 # генератор, який шукає числа у тексті
 def generator_numbers(text: str):
-    for numbers in re.findall(r"\d+\.\d+|\d+", text):
+    for numbers in re.findall(r"\s(\d+\.\d+|\d+)\s", text):
         yield float(numbers)
 
 # обчислення загальної суми чисел у вхідному рядку 
